@@ -1,0 +1,245 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Damion&family=Eczar:wght@600&family=Gabarito&family=Open+Sans:wght@300&family=Oswald&family=Pacifico&family=Roboto+Mono:ital,wght@0,100;0,300;0,400;1,400&family=Roboto:wght@100;400&family=Rubik:wght@500&display=swap');
+:root {
+  --coloe-main: #ff005c;
+  --color-1: white;
+  --color-2: #f7f7f7;
+  --color-text: black;
+}
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  text-align: right;
+  background: rgba(0, 0, 0, 0.7) url("../images/background.jpeg") center fixed;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+/*/////// Star Header ///////*/
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-1);
+  border-bottom: 1px black solid;
+  text-transform: capitalize;
+  z-index: 100;
+}
+header img {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+  padding-bottom: 5px;
+}
+header h1 {
+  margin-left: 5vw;
+  cursor: pointer;
+  letter-spacing: 3px;
+  color: var(--coloe-main);
+  font-weight: 800;
+}
+header h1 img {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+header ul {
+  width: 50vw;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header li {
+  display: flex;
+  align-items: center;
+}
+header ul li a {
+  color: var(--color-text);
+  font-weight: 600;
+  border-bottom: 2px var(--color-1) solid;
+  transition: 0.5s;
+}
+header a:hover {
+  padding-bottom: 5px;
+  border-bottom: 2px var(--coloe-main) solid;
+}
+.list,
+.X {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  header ul {
+    width: 100vw;
+    height: 45vh;
+    display: none;
+    position: absolute;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+    right: 0px;
+    top: 80px;
+    background-color: var(--color-1);
+  }
+  header ul li {
+    width: 100%;
+    margin: 8vh 40%;
+  }
+  .list {
+    display: block;
+    margin: 10px 10vw 0 10vw;
+    cursor: pointer;
+  }
+  .X {
+    margin: 10px 10vw 0 10vw;
+    cursor: pointer;
+  }
+  .open {
+    display: block;
+  }
+  .close {
+    display: none;
+  }
+}
+/*/////// End Header ///////*/
+
+/*/////// Start Main ///////*/
+main {
+  width: 100%;
+}
+main .s-book{
+  text-align: center;
+  padding-top: 100px;
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  justify-content: center;
+}
+main .s-book li{
+  margin: 20px 0;
+}
+main .s-book li a{
+  width: 100%;
+  display: inline-block;
+  color: white;
+  background-color: var(--coloe-main);
+  padding: 10px 0;
+}
+main .s-book li:nth-child(5) a{
+  background-color: slategray;
+}
+
+@media screen and (max-width: 450px){
+  main .s-book{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+/*/////// End Main ///////*/
+
+/* books */
+.books{
+  padding-top: 30px;
+  margin: auto;
+  width: 80%;
+}
+.book{
+  background: rgb(255, 255, 255);
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.book h2{
+  display: inline-block;
+  background-color: var(--coloe-main);
+  padding: 7px 15%;
+  color: white;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+.book a{
+  display: inline-block;
+  background-color: rgb(2, 200, 15);
+  padding: 10px 5%;
+  color: white;
+  border-radius: 10px;
+  margin: 0 20px;
+}
+@media screen and (max-width: 630px){
+  .books{
+    width: 95%;
+  }
+  .book h2 {
+    padding: 7px 3%;
+  }
+  .book a {
+    padding: 10px 3%;
+  }
+}
+/* end */
+
+
+/* Start support  */
+.support {
+  width: 100%;
+}
+.support .title {
+  padding-top: 50px;
+  width: 200px;
+  margin: auto;
+  text-align: center;
+}
+.support .title h2 {
+  color: white;
+  margin: 10px 0 40px 0;
+  padding: 0 0 15px 0;
+  border-bottom: 2px solid var(--coloe-main);
+}
+.socail {
+  margin-top: 30px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socail .item img {
+  width: 50px;
+  height: 50px;
+  margin: 0 30px;
+}
+@media screen and (max-width: 450px) {
+  .support form input,
+  button,
+  .support textarea {
+    width: 270px;
+  }
+}
+/* End support */
+
+/*/////// Start Footer ///////*/
+footer {
+  position: relative;
+  bottom: 0;
+  margin-top: 100px;
+  width: 100%;
+  padding: 20px 0;
+  color: white;
+  background: black;
+  text-align: center;
+  text-transform: capitalize;
+  word-spacing: 5px;
+}
+/*/////// End Footer ///////*/
